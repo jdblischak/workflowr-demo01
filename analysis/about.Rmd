@@ -5,4 +5,4 @@ output:
     toc: false
 ---
 
-Describe your project.
+This is a small example site to demonstrate the basic features of a workflowr.
