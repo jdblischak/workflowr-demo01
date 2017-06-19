@@ -13,3 +13,9 @@ Specifically,
 
 [rmarkdown]: http://rmarkdown.rstudio.com/rmarkdown_websites.htm
 [rstudio]: https://www.rstudio.com/products/rstudio/download/preview/
+
+## Example pages
+
+* [My first entry](entry01.html)
+* [Testing interactivity](interactive.html)
+* [Data import](data-import.html)
