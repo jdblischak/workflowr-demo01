@@ -1,0 +1,57 @@
+---
+title: "Testing interactivity"
+author: "John Blischak"
+date: 2017-06-19
+output: html_document
+---
+
+<!-- The file analysis/chunks.R contains chunks that define default settings
+shared across the workflowr files. -->
+```{r read-chunk, include=FALSE, cache=FALSE}
+knitr::read_chunk("chunks.R")
+```
+
+<!-- Update knitr chunk options -->
+```{r knitr-opts-chunk, include=FALSE}
+```
+
+<!-- Insert the date the file was last updated -->
+```{r last-updated, echo=FALSE, results='asis'}
+```
+
+<!-- Insert the code version (Git commit SHA1) if Git repository exists and R
+ package git2r is installed -->
+```{r code-version, echo=FALSE, results='asis'}
+```
+
+## datatable
+
+```{r datatable}
+library("DT")
+data("iris")
+datatable(iris, options = list(pageLength = 5))
+```
+
+## rbokeh
+
+```{r rbokeh, warning=FALSE}
+library("rbokeh")
+figure(width = NULL, height = NULL) %>%
+  ly_points(Sepal.Length, Sepal.Width, data = iris,
+    color = Species, glyph = Species,
+    hover = list(Sepal.Length, Sepal.Width))
+```
+
+## d3heatmap
+
+```{r d3heatmap, warning=FALSE}
+library("d3heatmap")
+data("mtcars")
+d3heatmap(mtcars, scale = "column", colors = "Blues")
+```
+
+## Session information
+
+<!-- Insert the session information into the document -->
+```{r session-info}
+```
